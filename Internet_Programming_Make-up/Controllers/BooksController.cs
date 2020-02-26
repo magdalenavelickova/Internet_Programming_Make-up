@@ -20,9 +20,9 @@ namespace Internet_Programming_Make_up.Controllers
         }
 
         // GET: Books
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int id)
         {
-            var libraryContext = _context.Books.Include(b => b.Genre);
+            var libraryContext = _context.Books.Where(b => b.GenreId == id);
             return View(await libraryContext.ToListAsync());
         }
 

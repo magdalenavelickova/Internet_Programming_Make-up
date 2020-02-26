@@ -13,7 +13,7 @@
 <ul>
     @foreach (Genres genres in @Model)
     {
-        <li>@Html.ActionLink(genres.Genre, "Index", "Genres", new { id = genres.Id }, null)</li>
+        <li>@Html.ActionLink(genres.Genre, "Index", "Books", new { id = genres.Id }, null)</li>
 
     }
 </ul>
